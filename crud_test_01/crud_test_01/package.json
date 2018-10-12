@@ -1,0 +1,9 @@
+{
+  "name": "crud_test_01",
+  "version": "0.0.0",
+  "description": "crud_test_01",
+  "main": "server.js",
+  "author": {
+    "name": ""
+  }
+}
