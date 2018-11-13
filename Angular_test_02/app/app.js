@@ -9,11 +9,10 @@ toDoList.controller('ListController', ['$scope', '$http', function($scope, $http
   };
 
   $scope.addItem = function(){
-    $scope.itemlist.push({
-      desc: $scope.newitem.desc,
-    });
-
-    $scope.newitem.desc = "";
+      $scope.itemlist.push({
+        desc: $scope.newitem.desc,
+      });
+      $scope.newitem.desc = null;
 
   };
 
