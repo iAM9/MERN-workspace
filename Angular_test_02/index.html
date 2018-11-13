@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="toDoList">
+    <head>
+        <title>To-Do test app</title>
+        <script src="app/lib/angular.min.js"></script>
+        <script src="app/lib/angular-route.min.js"></script>
+        <script src="app/app.js"></script>
+    </head>
+
+    <body>
+      <div ng-controller="ListController">
+        <input type="text" placeholder="Enter item" />
+        <button type="submit">Add item</button>
+            <p>SOMETHING: {{itemlist}}</p>
+        <p>{{2+2-5}}</p>
+
+      <ul ng-repeat="item in itemlist">
+        <li>
+          </lu><h4>{{item.desc}}</h4>
+        </li>
+      </ul>
+    </div>
+    </body>
+
+</html>
