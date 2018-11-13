@@ -9,8 +9,8 @@
 
     <body>
       <div ng-controller="ListController">
-        <input type="text" placeholder="Enter item" />
-        <button type="submit">Add item</button>
+        <input type="text" ng-model="newitem.desc" placeholder="Enter item" />
+        <button type="submit" ng-click="addItem()">Add item</button>
             <p>SOMETHING: {{itemlist}}</p>
         <p>{{2+2-5}}</p>
 
