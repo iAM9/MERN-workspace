@@ -2,6 +2,7 @@
 <html lang="en" ng-app="toDoList">
     <head>
         <title>To-Do test app</title>
+        <link href="content/css/styles.css" rel="stylesheet" type="text/css"  />
         <script src="app/lib/angular.min.js"></script>
         <script src="app/lib/angular-route.min.js"></script>
         <script src="app/app.js"></script>
@@ -15,7 +16,7 @@
       <ul >
         <li ng-repeat="item in itemlist">
           <h3>{{item.desc}}</h3>
-          <button type="submit" ng-click="removeItem(item)">Remove Item</div>
+          <button type="submit" class="remove" ng-click="removeItem(item)">Remove Item</div>
         </li>
       </ul>
     </div>

@@ -1,0 +1,21 @@
+body{
+  background-color: white
+}
+
+h1,h2,h3,h4{
+  color: red;
+  margin: 50px;
+
+}
+
+.remove{
+  float: right;
+  padding: 5px;
+  background: darkblue;
+  width: auto;
+  text-align: inherit;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
