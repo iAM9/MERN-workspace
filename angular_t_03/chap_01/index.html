@@ -16,7 +16,8 @@
             
             <div class="jumbotron"> 
                 <h1>Hello, {{name}}</h1>
-                <input type="text" placeholder="Enter anything here..." ng-model="name" class="form-control input-lg">
+                <label for="name">Enter your name</label>
+                <input type="text" placeholder="Enter anything here..." ng-model="name" class="form-control input-lg" id="name">
                 <h4>{{name}}</h4>
             </div>
         </div>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="demo" ng-controller="AppCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>Contacts Manager</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/controller.js"></script>
+</head>
+
+
+
+<body>
+<nav class="navbar navbar-default"role="navigation">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav-toggle">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">Contacts Manager</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="nav-toggle">
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Browse</a></li>
+            <li><a href="/add">Add Contact</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+            <input type="text" class="form-control" placeholder="Search">
+        </form>
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            this is our content area
+            <div class="col-sm-8">
+                <button ng-click="clickHandler()">Click me!</button>
+                <p>Click the button to toggle!</p>
+                
+                <input type="text" ng-model="search.name">
+                <div ng-if="isHidden">
+                    <ul>
+                        <li ng-repeat="contact in contacts | filter:search | orderBy:'name'">
+                            {{contact.name | json}} - {{contact.phone}}
+                            {{contact | json}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>What to do!!</p>
+                    <p ng-class="{'text-center': center, 'text-danger': error}" ng-style="styleDemo()">
+                        I have no idea!!!!
+                        {{'what am i doing!!' | truncate:6}}
+                    </p>
+                    <label><input type="checkbox" ng-model="center"> text-center</label>
+                    <label><input type="checkbox" ng-model="error"> text-danger</label>
+                    <label><input type="checkbox" ng-model="styler">ng-style</label>
+                </div>
+                <div class="col-sm-6">
+                        <p>What to do!!</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+                this is our side bar
+            </div>
+
+    </div>
+</div>
+</body>
+</html>

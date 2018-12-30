@@ -1,0 +1,41 @@
+<div class="content">
+
+    <div class="row">
+        <div class="col-sm-8">
+            this is our content area
+            <div class="col-sm-8">
+                <button ng-click="clickHandler()">Click me!</button>
+                <p>Click the button to toggle!</p>
+
+                <input type="text" ng-model="search">
+                <div ng-if="isHidden">
+                    <ul>
+                        <li ng-repeat="contact in contacts | filter:search | orderBy:'name'">
+                            {{contact.name | json}} - {{contact.phone}}
+                            {{contact | json}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>What to do!!</p>
+                    <p ng-class="{'text-center': center, 'text-danger': error}" ng-style="styleDemo()">
+                        I have no idea!!!!
+                        {{'what am i doing!!' | truncate:6}}
+                    </p>
+                    <label><input type="checkbox" ng-model="center"> text-center</label>
+                    <label><input type="checkbox" ng-model="error"> text-danger</label>
+                    <label><input type="checkbox" ng-model="styler">ng-style</label>
+                </div>
+                <div class="col-sm-6">
+                        <p>What to do!!</p>
+                    </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+                this is our side bar
+            </div>
+
+    </div>
+</div>

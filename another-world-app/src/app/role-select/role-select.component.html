@@ -1,0 +1,54 @@
+<div class="grid-container">
+  <div class="centre-text">
+    <h1 class="mat-display-1">Select your role</h1>
+  </div>
+  <mat-grid-list cols="3" rowHeight="300px">
+    <mat-grid-tile>
+      <button class="dashboard-card" mat-stroked-button color="basic">
+        <i class="material-icons md-48">person</i>
+        <p class="mat-h2">Administrator</p>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button class="dashboard-card" mat-stroked-button color="accent">
+        <i class="material-icons md-48">computer</i>
+        <p class="mat-h2">Developer</p>
+      </button>
+    </mat-grid-tile>
+    <mat-grid-tile>
+      <button class="dashboard-card" mat-stroked-button color="warn">
+        <i class="material-icons md-48">business_center</i>
+        <p class="mat-h2">Business</p>
+      </button>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+
+
+
+
+  <!--
+  <mat-grid-list cols="2" rowHeight="350px">
+    <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
+
+      <mat-card class="dashboard-card">
+        <mat-card-header>
+          <mat-card-title>
+            {{card.title}}
+            <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu" xPosition="before">
+              <button mat-menu-item>Expand</button>
+              <button mat-menu-item>Remove</button>
+            </mat-menu>
+          </mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="dashboard-card-content">
+          <div>Card Contentsssss Here</div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  -->
+</div>
